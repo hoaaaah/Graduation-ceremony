@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phản Ứng Thanh Xuân - Kỷ Yếu 2026</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+h2 {
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.info {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00c6ff;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #0072ff;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #00f2ff; }
+    to { text-shadow: 0 0 25px #00f2ff; }
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+}
+
+@keyframes rise {
+    from { transform: translateY(0); }
+    to { transform: translateY(-110vh); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🧪 PHẢN ỨNG THANH XUÂN ✨</h1>
+    <h2>KỶ YẾU 2026 – LỚP 12A9</h2>
+
+    <div class="info">
+        🔬 Dự án: Tổng hợp Thanh Xuân <br>
+        ⚗ Chất xúc tác: Cô trò – Tình bạn – Nụ cười – Thanh xuân <br>
+        🧫 Kết quả: Album kỷ yếu rực rỡ nhất! <br><br>
+
+        📅 Thời gian: 10h – Ngày 01 / 03 / 2026 <br>
+        📍 Địa điểm: Trường THPT Như Thanh <br><br>
+
+    <a href="#" class="button">SẴN SÀNG PHẢN ỨNG!</a>
+</div>
+
+<script>
+for (let i = 0; i < 20; i++) {
+    let bubble = document.createElement("div");
+    bubble.className = "bubble";
+    bubble.style.left = Math.random() * 100 + "vw";
+    bubble.style.animationDuration = (5 + Math.random() * 5) + "s";
+    bubble.style.width = bubble.style.height = (10 + Math.random() * 20) + "px";
+    document.body.appendChild(bubble);
+}
+</script>
+
+</body>
+</html>
