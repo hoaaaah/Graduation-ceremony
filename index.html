@@ -1,120 +1,166 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phản Ứng Thanh Xuân - Kỷ Yếu 2026</title>
+<title>Thiệp Mời Kỷ Yếu</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-    overflow-x: hidden;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
 }
 
-.container {
-    padding: 50px 20px;
+body{
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(to top,#6fb1ff,#a8d8ff,#ffd6ec);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
 }
 
-h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    animation: glow 2s infinite alternate;
+/* Mây */
+.cloud{
+    position:absolute;
+    background:white;
+    width:200px;
+    height:60px;
+    border-radius:50px;
+    opacity:0.8;
+    filter:blur(2px);
+    animation:cloudMove linear infinite;
 }
 
-h2 {
-    font-weight: normal;
-    margin-bottom: 20px;
+.cloud::before,
+.cloud::after{
+    content:"";
+    position:absolute;
+    background:white;
+    border-radius:50%;
 }
 
-.special {
-    font-size: 20px;
-    margin: 15px 0 30px 0;
-    padding: 10px 20px;
-    display: inline-block;
-    border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 25px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(5px);
+.cloud::before{
+    width:80px;
+    height:80px;
+    top:-30px;
+    left:30px;
 }
 
-.info {
-    font-size: 18px;
-    line-height: 1.8;
-    margin: 20px 0;
+.cloud::after{
+    width:100px;
+    height:100px;
+    top:-40px;
+    right:30px;
 }
 
-.button {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #00c6ff;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: 0.3s;
+@keyframes cloudMove{
+    from{ transform:translateX(-300px); }
+    to{ transform:translateX(120vw); }
 }
 
-.button:hover {
-    background: #0072ff;
+/* Card */
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 15px 50px rgba(0,0,0,0.2);
+    animation:fadeIn 2s ease;
+    max-width:600px;
 }
 
-@keyframes glow {
-    from { text-shadow: 0 0 10px #00f2ff; }
-    to { text-shadow: 0 0 25px #00f2ff; }
+.card h1{
+    font-size:30px;
+    margin-bottom:10px;
 }
 
-.bubble {
-    position: absolute;
-    bottom: -50px;
-    width: 20px;
-    height: 20px;
-    background: rgba(255,255,255,0.3);
-    border-radius: 50%;
-    animation: rise 10s infinite ease-in;
+.card h2{
+    font-weight:400;
+    margin-bottom:15px;
 }
 
-@keyframes rise {
-    from { transform: translateY(0); }
-    to { transform: translateY(-110vh); }
+.info{
+    margin-top:15px;
+    font-size:17px;
+    line-height:1.8;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* Cánh hoa */
+.petal{
+    position:absolute;
+    top:-10px;
+    width:12px;
+    height:12px;
+    background:#ffb6d9;
+    border-radius:50% 50% 50% 0;
+    opacity:0.8;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>🧪 PHẢN ỨNG THANH XUÂN ✨</h1>
-    <h2>KỶ YẾU 2026 – LỚP 12A9</h2>
+<!-- Mây -->
+<div class="cloud" style="top:10%; animation-duration:60s;"></div>
+<div class="cloud" style="top:30%; animation-duration:80s; transform:scale(0.8);"></div>
+<div class="cloud" style="top:50%; animation-duration:100s; transform:scale(1.2);"></div>
 
-    <div class="special">
-        🔥 Người truyền lửa phản ứng:<br>
-        <strong>Nguyễn Thị Hà</strong>
-    </div>
+<!-- Nội dung thiệp -->
+<div class="card">
+    <h1>🌸 THIỆP MỜI  KỶ YẾU 🌸</h1>
+    <h2>Kính mời cô </h2>
+    <h1>Nguyễn Thị Thúy Hà</h1>
+
+    <p>
+        Người đã lặng thầm gieo những con số<br>
+        Và thắp sáng ước mơ bằng những định lý yêu thương.
+    </p>
 
     <div class="info">
-        🔬 Dự án: Tổng hợp Thanh Xuân <br>
-        ⚗ Chất xúc tác: Cô trò – Tình bạn – Nụ cười – Thanh xuân <br>
-        🧫 Kết quả: Album kỷ yếu rực rỡ nhất! <br><br>
+        📅 Thời gian: 10:00 sáng, ngày 01 tháng 03 năm 2026<br>
+        📍 Địa điểm: Sân trường THPT Như Thanh 
+    </div>
 
-        📅 Thời gian: 10h – Ngày 01 / 03 / 2026 <br>
-        📍 Địa điểm: Trường THPT Như Thanh <br><br>
-
-    <a href="#" class="button">SẴN SÀNG PHẢN ỨNG!</a>
+    <p style="margin-top:15px;">
+        Sự hiện diện của cô là niềm vinh hạnh lớn lao<br>
+        Và là mảnh ghép không thể thiếu trong thanh xuân của chúng em.
+    </p>
 </div>
 
 <script>
-for (let i = 0; i < 20; i++) {
-    let bubble = document.createElement("div");
-    bubble.className = "bubble";
-    bubble.style.left = Math.random() * 100 + "vw";
-    bubble.style.animationDuration = (5 + Math.random() * 5) + "s";
-    bubble.style.width = bubble.style.height = (10 + Math.random() * 20) + "px";
-    document.body.appendChild(bubble);
+// Tạo cánh hoa rơi
+function createPetal(){
+    const petal = document.createElement("div");
+    petal.classList.add("petal");
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (6 + Math.random() * 6) + "s";
+    petal.style.opacity = Math.random();
+    document.body.appendChild(petal);
+
+    setTimeout(() => {
+        petal.remove();
+    }, 12000);
 }
+
+setInterval(createPetal, 400);
 </script>
 
 </body>
